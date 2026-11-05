@@ -1,6 +1,7 @@
 :root {
   --bg-color: #FDFBF7;
   --text-main: #3D322C;
+  --text-white: #fff;
   --accent-color: #C86D51;
   --card-bg: #FFFFFF;
   --border-color: #EFECE6;
@@ -56,6 +57,11 @@ table {
 	border-spacing: 0;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 
 
 .logo-img{
@@ -76,7 +82,7 @@ h1{
 
 .header{
   display: flex;
-  padding: 1.5em 1em;
+  padding: 1em;
   justify-content: space-between;
 }
 
@@ -147,6 +153,32 @@ span{
   transform: translate(-50%, 50%) rotate(-45deg);
 }
 
-/* .nav{
-  
-} */
+.hero-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url('./imgs/blog-image-hero.png');
+  padding-top: 15vh;
+  padding-inline: 1.5em;
+  padding-bottom: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--text-white);
+}
+
+.hero-section h2{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.hero-section .date {
+  font-size: 0.75em;
+}
+
+
+@media (min-width: 576px) {
+  .ham-menu{
+    display: none;
+  }
+}
