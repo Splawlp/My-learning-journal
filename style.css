@@ -90,12 +90,21 @@ h1{
   display: flex;
   padding: 1em;
   justify-content: space-between;
+  background-color: var(--bg-color);
 }
 
 li,
 span{
   color: inherit;
 }
+
+a{
+  transition: all .3s;
+}
+
+a:hover{
+    color: var(--accent-color);
+  }
 
 .nav ul{
     display: none;
@@ -180,6 +189,7 @@ span{
 
 .hero-section h2,
 .blog-title{
+  color: var(--accent-color);
   font-size: 2em;
   font-weight: bold;
 }
@@ -212,6 +222,28 @@ span{
     justify-self: center;
   }
 
+.blog-link{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 1em;
+}
+
+footer{
+  background-color: var(--accent-color);
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+footer h2{
+  font-weight: bold;
+}
+
 
 @media (min-width: 576px) {
   .ham-menu{
@@ -221,9 +253,14 @@ span{
   .nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    
+    gap: 3em;
+    margin-right: 40px;
   }
+
+  .nav ul li{
+    font-weight: bold;
+  }
+
 }
 
