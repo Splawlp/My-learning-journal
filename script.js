@@ -15,7 +15,7 @@ const currentYear = new Date().getFullYear();
 
 copy.innerText += currentYear;
 
-if (blogExpand.style.display !== 'none'){
+if (blogExpand){
   blogExpand.addEventListener('click', (e) => {
   e.preventDefault();
   blogPosts.forEach(post => {
