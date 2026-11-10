@@ -63,11 +63,34 @@ a{
 }
 
 
+/*
+====================
+        MAIN        
+====================
+*/
 
 body{
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+h1{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+li,
+span{
+  color: inherit;
+}
+
+a{
+  transition: all .3s;
+}
+
+a:hover{
+  color: var(--accent-color);
 }
 
 .logo-img{
@@ -81,30 +104,12 @@ body{
   gap: .5rem;
 }
 
-h1{
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 .header{
   display: flex;
   padding: 1em;
   justify-content: space-between;
   background-color: var(--bg-color);
 }
-
-li,
-span{
-  color: inherit;
-}
-
-a{
-  transition: all .3s;
-}
-
-a:hover{
-    color: var(--accent-color);
-  }
 
 .nav ul{
     display: none;
@@ -172,6 +177,28 @@ a:hover{
   transform: translate(-50%, 50%) rotate(-45deg);
 }
 
+footer{
+  background-color: var(--accent-color);
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+footer h2{
+  font-weight: bold;
+}
+
+
+/*
+====================
+        INDEX        
+====================
+*/
+
 .hero-section{
   display: flex;
   flex-direction: column;
@@ -187,11 +214,14 @@ a:hover{
   color: var(--text-white);
 }
 
-.hero-section h2,
-.blog-title{
+h2{
   color: var(--accent-color);
-  font-size: 2em;
+  font-size: 2.25em;
   font-weight: bold;
+}
+
+.blog-title{
+  font-size: 1.75em;
 }
 
 .hero-section .date,
@@ -214,8 +244,12 @@ a:hover{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: all .5s;
 }
 
+.blog-post:hover{
+  scale: 1.05;
+}
 
 #blog-link{
   grid-column: 1 / -1;
@@ -226,20 +260,56 @@ a:hover{
   margin: 1em;
   }
 
-footer{
-  background-color: var(--accent-color);
-  color: var(--text-white);
+/*
+====================
+        BLOG        
+====================
+*/
+
+.article{
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  margin-block: 5em;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
+  gap: 2em;
 }
 
-footer h2{
-  font-weight: bold;
+.article-date{
+  font-size: 1.25em;
 }
+
+.article-image {
+  width: 110%;
+  max-width: none;
+  display: block;
+  margin-left: -5%;
+}
+
+.article-part{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.article-part h3{
+  font-size: 1.75em;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.recent-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/*
+====================
+        MEDIA        
+====================
+*/
 
 @media (max-width: 568px) {
   .small-screen-none,

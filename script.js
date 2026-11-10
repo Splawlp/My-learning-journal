@@ -21,4 +21,5 @@ if (blogExpand){
   blogPosts.forEach(post => {
     post.style.display = 'flex';
   })
+  blogExpand.style.display = 'none'
 })}
