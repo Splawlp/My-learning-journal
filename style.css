@@ -307,6 +307,32 @@ h2{
 
 /*
 ====================
+        ABOUT ME        
+====================
+*/
+
+.about-intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
+.about-photo{
+  max-height: 182px;
+}
+
+.about-title{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+
+/*
+====================
         MEDIA        
 ====================
 */
