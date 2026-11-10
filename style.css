@@ -201,11 +201,12 @@ a:hover{
 
 .blog{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 450px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   gap: 20px;  
   padding-inline: 1.5em;
   padding-block: 1em;
+  margin-inline: auto;
 }
 
 .blog-post{
@@ -213,21 +214,17 @@ a:hover{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 380px;
 }
 
 
-.blog-link{
-    grid-column: 1 / -1;
-    justify-self: center;
-  }
-
-.blog-link{
+#blog-link{
+  grid-column: 1 / -1;
+  justify-self: center;
   text-decoration: underline;
   font-weight: bold;
   font-size: 1.25em;
   margin: 1em;
-}
+  }
 
 footer{
   background-color: var(--accent-color);
@@ -244,6 +241,12 @@ footer h2{
   font-weight: bold;
 }
 
+@media (max-width: 568px) {
+  .small-screen-none,
+  .medium-screen-none {
+    display: none;
+  }
+}
 
 @media (min-width: 576px) {
   .ham-menu{
@@ -262,5 +265,25 @@ footer h2{
     font-weight: bold;
   }
 
+  .medium-screen-none {
+    display: none;
+  }
+
+  .small-screen-none {
+    display: flex;
+  }
 }
 
+@media (min-width: 838px) {
+  .medium-screen-none{
+    display:flex;
+  }
+
+  #blog-link{
+    display: none;
+  }
+  .blog{
+    grid-template-columns: repeat(3, minmax(250px, 550px));
+    max-width: 1200px;
+  }
+}

@@ -1,7 +1,10 @@
-const hamMenu = document.querySelector('.ham-menu')
-const copy = document.getElementById('copyright')
+const hamMenu = document.querySelector('.ham-menu');
+const copy = document.getElementById('copyright');
+const offScreenMenu = document.querySelector('.off-screen-menu');
 
-const offScreenMenu = document.querySelector('.off-screen-menu')
+const blogPosts = document.querySelectorAll('.blog-post')
+const blogExpand = document.getElementById('blog-link');
+
 
 hamMenu.addEventListener('click', ()=> {
   hamMenu.classList.toggle('active');
@@ -11,3 +14,11 @@ hamMenu.addEventListener('click', ()=> {
 const currentYear = new Date().getFullYear();
 
 copy.innerText += currentYear;
+
+
+blogExpand.addEventListener('click', (e) => {
+  e.preventDefault();
+  blogPosts.forEach(post => {
+    post.style.display = 'flex';
+  })
+})
