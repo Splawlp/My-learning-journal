@@ -15,10 +15,10 @@ const currentYear = new Date().getFullYear();
 
 copy.innerText += currentYear;
 
-
-blogExpand.addEventListener('click', (e) => {
+if (blogExpand.style.display !== 'none'){
+  blogExpand.addEventListener('click', (e) => {
   e.preventDefault();
   blogPosts.forEach(post => {
     post.style.display = 'flex';
   })
-})
+})}
