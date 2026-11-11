@@ -327,6 +327,7 @@ h2{
 
 .about-photo{
   max-height: 182px;
+  border-radius: 100%;
 }
 
 .about-title{
