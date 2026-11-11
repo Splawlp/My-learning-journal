@@ -109,6 +109,9 @@ a:hover{
   padding: 1em;
   justify-content: space-between;
   background-color: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav ul{
@@ -194,7 +197,7 @@ footer h2{
   font-size: 1.15em;
 }
 
-main{
+.secondary-main{
   padding-inline: 1em;
 }
 
@@ -274,7 +277,7 @@ h2{
 .article{
   max-width: 1000px;
   margin-inline: auto;
-  margin-block: 5em;
+  margin-block: 2em;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -286,7 +289,7 @@ h2{
 
 .article-image {
   width: 100vw;
-  margin-left: -1em;
+  margin-inline: -1em;
 }
 
 .article-part{
@@ -350,6 +353,10 @@ h2{
     display: none;
   }
 
+  .header{
+    position: relative;
+  }
+
   .nav ul{
     display: flex;
     flex-direction: row;
@@ -369,6 +376,10 @@ h2{
   .small-screen-none {
     display: flex;
   }
+
+  .article{
+    margin-block: 4em;
+  }
 }
 
 @media (min-width: 838px) {
@@ -387,5 +398,15 @@ h2{
   .about-intro{
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+
+@media (min-width: 838px) {
+  .article-image {
+    width: 110%;
+    max-width: none;
+    display: block;
+    margin-left: -5%;
   }
 }
